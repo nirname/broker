@@ -1,10 +1,6 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
     let fillInButton = document.getElementById("fillInButton");
     fillInButton.addEventListener("click", function () {
-        // Perform the scanning functionality here
-
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
             let tab = tabs[0];
 
