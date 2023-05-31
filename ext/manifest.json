@@ -5,8 +5,21 @@
     "manifest_version": 3,
     "icons": {},
     "action": {
-        "default_popup":"popup.html"
+        "default_popup": "popup.html"
     },
-    "permissions": [],
-    "background":{}
+    "permissions": [
+        "tabs",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "script.js"
+            ]
+        }
+    ],
+    "background": {}
 }
