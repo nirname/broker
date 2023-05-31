@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     function onTabReady() {
                         // Your code here
                         fillInTargetForm();
+                        waitForResult();
                     }
 
                     // Check if the document is ready
@@ -28,3 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }, { passive: true });
 });
 
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+    console.log("Broker says: I have got a message", message);
+    if (message.result !== undefined) {
+        // Message received from content script with the calculation result
+        var result = message.result;
+        document.getElementById('result').textContent = result;
+        // Process the result and take actions in your extension
+        // Show the result in your extension UI or perform any other necessary tasks
+    }
+});
+
+console.log("Loaded");

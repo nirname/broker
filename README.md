@@ -4,10 +4,8 @@
 * form - то что заполняет брокер руками
 * target - пример целевой формы
 
-
 ---
 
-Чтобы в расширение подгрузить ресурсы из интернета
 
 ```json
 "web_accessible_resources": [
@@ -18,4 +16,8 @@
         "matches": ["https://localhost/extension"]
     }
 ],
+"background": {
+    "service_worker": "worker.js"
+}
 ```
+

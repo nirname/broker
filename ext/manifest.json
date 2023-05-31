@@ -1,6 +1,6 @@
 {
-    "name": "Insurance Broker",
-    "description": "Form autofill",
+    "name": "Broker",
+    "description": "Insurance Broker Forms Autofill",
     "version": "1.0",
     "manifest_version": 3,
     "icons": {},
@@ -23,6 +23,5 @@
                 "content.js"
             ]
         }
-    ],
-    "background": {}
+    ]
 }
