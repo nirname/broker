@@ -1,0 +1,12 @@
+{
+    "name": "NN",
+    "description": "Fill in forms",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {},
+    "action": {
+        "default_popup":"popup.html"
+    },
+    "permissions": [],
+    "background":{}
+}
